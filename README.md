@@ -8,9 +8,6 @@
 [![R-CMD-check](https://github.com/brunomontezano/CFPr/workflows/R-CMD-check/badge.svg)](https://github.com/brunomontezano/CFPr/actions)
 <!-- badges: end -->
 
-The goal of CFPr is to provide tables from Brazilian Federal Council of
-Psychology (CFP in Brazilian Portuguese).
-
 The purpose of the CFPr package is to provide tables contained on the
 Brazilian Federal Psychology Council website within the R environment
 with ease in a clean and nice format.
@@ -60,12 +57,17 @@ bysex_table
 
 # To Do
 
--   [ ] Plotting functions
--   [ ] Restructure worflow to provide data (as data and not
-    function-based)
+-   [ ] Plotting functions. Is it necessary?
+-   [ ] Restructure workflow to provide data (as data and not
+    function-based). Is it better?
 
 # Acknowledgement
 
 I’d like to thank the [Brazilian Federal Council of
 Psychology](https://site.cfp.org.br/) for making the data available to
 the population.
+
+# Contact
+
+Feel free to leave an issue to improve the package, and contact me
+through this [email](mailto:brunodoyt@gmail.com).
