@@ -1,6 +1,6 @@
 Package: CFPr
 Title: Scrapes Data from Brazilian Federal Council of Psychology
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
     person("Bruno", "Braga Montezano", ,
     "brunodoyt@gmail.com", role = c("aut", "cre"),
