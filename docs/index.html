@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scrapes Data from Brazilian Federal Council of Psychology • CFPr</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -13,6 +19,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Scrapes Data from Brazilian Federal Council of Psychology">
 <meta property="og:description" content="Scrapes different tables from Brazilian Federal Council of Psychology about brazilian psychologists.">
+<meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -31,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">CFPr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -66,21 +73,77 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="cfpr" class="section level1">
+
+<div id="cfpr-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#cfpr" class="anchor"></a>CFPr</h1></div>
+<a href="#cfpr-" class="anchor"></a>CFPr <a href="https://github.com/brunomontezano/CFPr/"><img src="reference/figures/logo.png" align="right" height="139"></a>
+</h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
-<p>The goal of CFPr is to provide tables from Brazilian Federal Council of Psychology (CFP in Brazilian Portuguese).</p>
+
+<p>The purpose of the CFPr package is to provide tables contained on the Brazilian Federal Psychology Council website within the R environment with ease in a clean and nice format.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the current version of CFPr with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"brunomontezano/CFPr"</span><span class="op">)</span></code></pre></div>
 </div>
+<div id="usage" class="section level2">
+<h2 class="hasAnchor">
+<a href="#usage" class="anchor"></a>Usage</h2>
+<p>You can choose between three tables</p>
+<ul>
+<li>By-state table (<code><a href="reference/tabela_estado.html">tabela_estado()</a></code>)</li>
+<li>By-council table (<code><a href="reference/tabela_regional.html">tabela_regional()</a></code>)</li>
+<li>By-gender table (<code><a href="reference/tabela_sexo.html">tabela_sexo()</a></code>)</li>
+</ul>
+<p>Let’s suppose I want to check the number of psychologists of each gender in brazilian states. In this case, I should use the <code>tabela_sexo</code> function:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Load the package</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://brunomontezano.github.io/CFPr">CFPr</a></span><span class="op">)</span>
+<span class="co"># Assign data to an R object and then print it</span>
+<span class="va">bysex_table</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/tabela_sexo.html">tabela_sexo</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">bysex_table</span>
+<span class="co">#&gt; # A tibble: 29 × 4</span>
+<span class="co">#&gt;    estado           feminino masculino nao_informado</span>
+<span class="co">#&gt;    &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Acre                  891       166            73</span>
+<span class="co">#&gt;  2 Alagoas              4290       727            24</span>
+<span class="co">#&gt;  3 Amapá                 805       160           170</span>
+<span class="co">#&gt;  4 Amazonas             4516       834           197</span>
+<span class="co">#&gt;  5 Bahia               16874      2673           246</span>
+<span class="co">#&gt;  6 Ceará                8651      1596          2121</span>
+<span class="co">#&gt;  7 Distrito Federal    11070      1940           340</span>
+<span class="co">#&gt;  8 Espírito Santo       6373      1222            69</span>
+<span class="co">#&gt;  9 Goiás               10155      1294           199</span>
+<span class="co">#&gt; 10 Maranhão             3513       643            31</span>
+<span class="co">#&gt; # … with 19 more rows</span></code></pre></div>
 </div>
+</div>
+<div id="to-do" class="section level1">
+<h1 class="hasAnchor">
+<a href="#to-do" class="anchor"></a>To Do</h1>
+<ul class="task-list">
+<li>
+<input type="checkbox" disabled>
+Plotting functions. Is it necessary?</li>
+<li>
+<input type="checkbox" disabled>
+Restructure workflow to provide data (as data and not function-based). Is it better?</li>
+</ul>
+</div>
+<div id="acknowledgement" class="section level1">
+<h1 class="hasAnchor">
+<a href="#acknowledgement" class="anchor"></a>Acknowledgement</h1>
+<p>I’d like to thank the <a href="https://site.cfp.org.br/">Brazilian Federal Council of Psychology</a> for making the data available to the population.</p>
+</div>
+<div id="contact" class="section level1">
+<h1 class="hasAnchor">
+<a href="#contact" class="anchor"></a>Contact</h1>
+<p>Feel free to leave an issue to improve the package, and contact me through this <a href="mailto:brunodoyt@gmail.com">email</a>.</p>
+</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -107,7 +170,13 @@
 </ul>
 </div>
 
-  </div>
+  <div class="dev-status">
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/brunomontezano/CFPr/actions"><img src="https://github.com/brunomontezano/CFPr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
