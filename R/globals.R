@@ -1,3 +1,3 @@
 utils::globalVariables(c(
-  "regiao_crp", "psicologos"
+  "regiao_crp", "psicologos", "estado"
 ))

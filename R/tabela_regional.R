@@ -1,3 +1,8 @@
+#' Get regional data about number of psychologist in Brazil
+#'
+#' @return A tibble containing three columns: regional council, brazilian state (initials) and number of psychologists.
+#' @export
+#'
 tabela_regional <- function() {
   "https://www2.cfp.org.br/infografico/quantos-somos/" %>%
     httr::GET() %>%

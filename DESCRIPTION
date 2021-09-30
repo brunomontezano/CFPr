@@ -19,4 +19,5 @@ Imports:
     magrittr,
     purrr,
     readr,
-    rvest
+    rvest,
+    stringr
